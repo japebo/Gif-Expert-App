@@ -7,9 +7,9 @@ export const GifGrid = ({category}) => {
 
     const [images, setImages] = useState([]);
  
-    useEffect(() => {
-        getGifs(category).then( imgs => setImages(imgs) );
-    }, [category]);
+    useEffect(() => { //hook
+        getGifs(category).then( imgs => setImages(imgs) ); //helper that returns a promise
+    }, [category]); //saying that if category changes (that will not), the instrucción inside useEffect will be re-runned.
 
     return (
         <>
