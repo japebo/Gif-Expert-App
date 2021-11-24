@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ( {defaultCategories = [] }) => {
 
     // const [categories, setCategories] = useState(['One Punch', 'Samurai X', 'Dragon Ball']);
-    const [categories, setCategories] = useState(['One Punch']);
+    const [categories, setCategories] = useState(defaultCategories);
     
     // const handleAdd = () => {
     //     // categories.push('HunterXHunter'); //no sirve para nuestro propósito de agregar un nuevo elemento al array que sea renderizable, lo que hace es agregar un nuevo elemento al objeto array, pero sin actualizarlo en el Hook useState. 
